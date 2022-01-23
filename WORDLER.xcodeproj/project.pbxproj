@@ -13,6 +13,9 @@
 		C60E523C279D03BD00E09132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E522A279D03BC00E09132 /* ContentView.swift */; };
 		C60E523D279D03BD00E09132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60E522B279D03BC00E09132 /* Assets.xcassets */; };
 		C60E523E279D03BD00E09132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60E522B279D03BC00E09132 /* Assets.xcassets */; };
+		C60E5249279D03E400E09132 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = C60E5248279D03E400E09132 /* ToastUI */; };
+		C60E524B279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
+		C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,7 @@
 		C60E5230279D03BC00E09132 /* WORDLER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WORDLER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E5236279D03BD00E09132 /* WORDLER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WORDLER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E5238279D03BD00E09132 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrabbleFiveWords.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60E5249279D03E400E09132 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,7 @@
 			children = (
 				C60E5229279D03BC00E09132 /* WORDLERApp.swift */,
 				C60E522A279D03BC00E09132 /* ContentView.swift */,
+				C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */,
 				C60E522B279D03BC00E09132 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -94,6 +100,9 @@
 			dependencies = (
 			);
 			name = "WORDLER (iOS)";
+			packageProductDependencies = (
+				C60E5248279D03E400E09132 /* ToastUI */,
+			);
 			productName = "WORDLER (iOS)";
 			productReference = C60E5230279D03BC00E09132 /* WORDLER.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +151,9 @@
 				Base,
 			);
 			mainGroup = C60E5223279D03BB00E09132;
+			packageReferences = (
+				C60E5247279D03E400E09132 /* XCRemoteSwiftPackageReference "ToastUI" */,
+			);
 			productRefGroup = C60E5231279D03BC00E09132 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,6 +190,7 @@
 			files = (
 				C60E523B279D03BD00E09132 /* ContentView.swift in Sources */,
 				C60E5239279D03BD00E09132 /* WORDLERApp.swift in Sources */,
+				C60E524B279D040700E09132 /* ScrabbleFiveWords.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +200,7 @@
 			files = (
 				C60E523C279D03BD00E09132 /* ContentView.swift in Sources */,
 				C60E523A279D03BD00E09132 /* WORDLERApp.swift in Sources */,
+				C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +466,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C60E5247279D03E400E09132 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C60E5248279D03E400E09132 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C60E5247279D03E400E09132 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C60E5224279D03BB00E09132 /* Project object */;
 }
