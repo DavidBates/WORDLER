@@ -16,6 +16,8 @@
 		C60E5249279D03E400E09132 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = C60E5248279D03E400E09132 /* ToastUI */; };
 		C60E524B279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
 		C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
+		C60E524E279E498100E09132 /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60E524D279E498100E09132 /* ClearSans-Bold.ttf */; };
+		C60E524F279E498100E09132 /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60E524D279E498100E09132 /* ClearSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		C60E5236279D03BD00E09132 /* WORDLER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WORDLER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E5238279D03BD00E09132 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrabbleFiveWords.swift; sourceTree = "<group>"; };
+		C60E524D279E498100E09132 /* ClearSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold.ttf"; sourceTree = "<group>"; };
+		C60E5250279E4A5A00E09132 /* WORDLER--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WORDLER--iOS--Info.plist"; sourceTree = "<group>"; };
+		C60E5251279E4AA300E09132 /* WORDLER--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WORDLER--macOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,8 @@
 		C60E5223279D03BB00E09132 = {
 			isa = PBXGroup;
 			children = (
+				C60E5251279E4AA300E09132 /* WORDLER--macOS--Info.plist */,
+				C60E5250279E4A5A00E09132 /* WORDLER--iOS--Info.plist */,
 				C60E5228279D03BC00E09132 /* Shared */,
 				C60E5237279D03BD00E09132 /* macOS */,
 				C60E5231279D03BC00E09132 /* Products */,
@@ -59,6 +66,7 @@
 		C60E5228279D03BC00E09132 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C60E524D279E498100E09132 /* ClearSans-Bold.ttf */,
 				C60E5229279D03BC00E09132 /* WORDLERApp.swift */,
 				C60E522A279D03BC00E09132 /* ContentView.swift */,
 				C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */,
@@ -169,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60E524E279E498100E09132 /* ClearSans-Bold.ttf in Resources */,
 				C60E523D279D03BD00E09132 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60E524F279E498100E09132 /* ClearSans-Bold.ttf in Resources */,
 				C60E523E279D03BD00E09132 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +338,7 @@
 				DEVELOPMENT_TEAM = NRQ9WJKR5R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WORDLER--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -358,6 +369,7 @@
 				DEVELOPMENT_TEAM = NRQ9WJKR5R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WORDLER--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,6 +404,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WORDLER--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -420,6 +433,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WORDLER--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
