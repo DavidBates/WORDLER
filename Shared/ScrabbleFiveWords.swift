@@ -9,7 +9,7 @@
 import Foundation
 
 
-func LoadDictionary() -> [String]{
+func LoadScrabbleDictionary() -> [String]{
 var ScrabbleFiveWords = [String]()
 
 ScrabbleFiveWords.append("aahed")

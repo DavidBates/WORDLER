@@ -18,6 +18,10 @@
 		C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
 		C60E524E279E498100E09132 /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60E524D279E498100E09132 /* ClearSans-Bold.ttf */; };
 		C60E524F279E498100E09132 /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60E524D279E498100E09132 /* ClearSans-Bold.ttf */; };
+		C60E525327A0B16300E09132 /* WordleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525227A0B16300E09132 /* WordleFiveWords.swift */; };
+		C60E525427A0B16300E09132 /* WordleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525227A0B16300E09132 /* WordleFiveWords.swift */; };
+		C60E525627A0B31400E09132 /* DictionaryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525527A0B31400E09132 /* DictionaryLoader.swift */; };
+		C60E525727A0B31400E09132 /* DictionaryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525527A0B31400E09132 /* DictionaryLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,8 @@
 		C60E524D279E498100E09132 /* ClearSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold.ttf"; sourceTree = "<group>"; };
 		C60E5250279E4A5A00E09132 /* WORDLER--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WORDLER--iOS--Info.plist"; sourceTree = "<group>"; };
 		C60E5251279E4AA300E09132 /* WORDLER--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WORDLER--macOS--Info.plist"; sourceTree = "<group>"; };
+		C60E525227A0B16300E09132 /* WordleFiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleFiveWords.swift; sourceTree = "<group>"; };
+		C60E525527A0B31400E09132 /* DictionaryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,8 @@
 				C60E5229279D03BC00E09132 /* WORDLERApp.swift */,
 				C60E522A279D03BC00E09132 /* ContentView.swift */,
 				C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */,
+				C60E525527A0B31400E09132 /* DictionaryLoader.swift */,
+				C60E525227A0B16300E09132 /* WordleFiveWords.swift */,
 				C60E522B279D03BC00E09132 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -200,6 +208,8 @@
 			files = (
 				C60E523B279D03BD00E09132 /* ContentView.swift in Sources */,
 				C60E5239279D03BD00E09132 /* WORDLERApp.swift in Sources */,
+				C60E525327A0B16300E09132 /* WordleFiveWords.swift in Sources */,
+				C60E525627A0B31400E09132 /* DictionaryLoader.swift in Sources */,
 				C60E524B279D040700E09132 /* ScrabbleFiveWords.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +220,8 @@
 			files = (
 				C60E523C279D03BD00E09132 /* ContentView.swift in Sources */,
 				C60E523A279D03BD00E09132 /* WORDLERApp.swift in Sources */,
+				C60E525427A0B16300E09132 /* WordleFiveWords.swift in Sources */,
+				C60E525727A0B31400E09132 /* DictionaryLoader.swift in Sources */,
 				C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

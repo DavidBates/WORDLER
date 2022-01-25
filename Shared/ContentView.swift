@@ -70,7 +70,9 @@ struct ContentView: View {
             Spacer()
             HStack(){
                 Text("Contains: ")
-                TextField("", text: $contains)
+                TextField("", text: $contains).onSubmit({
+                    self.dictionary = parseDict(contains: self.contains, excludes: self.excludes)
+                })
 #if os(iOS)
                     .textInputAutocapitalization(.never).disableAutocorrection(true)
 #endif
@@ -78,7 +80,9 @@ struct ContentView: View {
             }.padding()
             HStack(){
                 Text("Excludes: ")
-                TextField("", text: $excludes)
+                TextField("", text: $excludes).onSubmit({
+                    self.dictionary = parseDict(contains: self.contains, excludes: self.excludes)
+                })
 #if os(iOS)
                     .textInputAutocapitalization(.never).disableAutocorrection(true)
 #endif
@@ -121,27 +125,31 @@ struct ContentView: View {
             //            }
             
             Button("Parse"){
-                self.dictionary = LoadDictionary()
-                if(self.contains.count > 0){
-                    let containSet:CharacterSet = CharacterSet.init(charactersIn: self.contains)
-                    
-                    self.dictionary = self.dictionary.filter{
-                        containSet.isSubset(of: CharacterSet.init(charactersIn: $0))
-                    }
-                }
-                if(self.excludes.count > 0){
-                    let excludeSet:CharacterSet = CharacterSet.init(charactersIn: self.excludes)
-                    
-                    self.dictionary = self.dictionary.filter{
-                        excludeSet.isDisjoint(with: CharacterSet.init(charactersIn: $0))
-                    }
-                }
-                
+                self.dictionary = parseDict(contains: self.contains, excludes: self.excludes)
             }
             StringList(dictionary: dictionary)
         }
     }
     
+}
+
+func parseDict(contains:String, excludes:String) -> [String]{
+    var dictionary:[String] = LoadDictionary()
+    if(contains.count > 0){
+        let containSet:CharacterSet = CharacterSet.init(charactersIn: contains)
+        
+        dictionary = dictionary.filter{
+            containSet.isSubset(of: CharacterSet.init(charactersIn: $0))
+        }
+    }
+    if(excludes.count > 0){
+        let excludeSet:CharacterSet = CharacterSet.init(charactersIn: excludes)
+        
+        dictionary = dictionary.filter{
+            excludeSet.isDisjoint(with: CharacterSet.init(charactersIn: $0))
+        }
+    }
+    return dictionary
 }
 
 struct ModalView: View {
