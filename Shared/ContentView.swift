@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+#if os(iOS)
 import ToastUI
+#endif
 
 struct StringList: View {
     var dictionary:[String]
@@ -14,23 +16,29 @@ struct StringList: View {
     
     var body: some View {
         List(dictionary, id: \.self) { string in
-            Text(string).onTapGesture(count: 2) {
-                UIPasteboard.general.string = string
-                self.presentingToast = true
-                
-            }
-        }.toast(isPresented: $presentingToast, dismissAfter: 1) {
+            Text(string)
+#if os(iOS)
+                .onTapGesture(count: 2) {
+                    UIPasteboard.general.string = string
+                    self.presentingToast = true
+                    
+                }
+#endif
+        }
+#if os(iOS)
+        .toast(isPresented: $presentingToast, dismissAfter: 1) {
             ToastView("Copied!") {
-              // custom content views
-              Image(systemName: "arrow.up.doc.on.clipboard")
-                .font(.system(size: 48))
-                .foregroundColor(.green)
-                .padding()
+                // custom content views
+                Image(systemName: "arrow.up.doc.on.clipboard")
+                    .font(.system(size: 48))
+                    .foregroundColor(.green)
+                    .padding()
             } background: {
-              // custom background views
-              Color.green.opacity(0.01)
+                // custom background views
+                Color.green.opacity(0.01)
             }
-          }
+        }
+#endif
     }
 }
 
@@ -44,65 +52,73 @@ struct ContentView: View {
             HStack {
                 let rectSize: CGFloat = 45
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WGreen"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WGreen")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("W").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("W").foregroundColor(Color("WText")))
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("O").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("O").foregroundColor(Color("WText")))
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("R").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("R").foregroundColor(Color("WText")))
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("D").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("D").foregroundColor(Color("WText")))
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("L").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("L").foregroundColor(Color("WText")))
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WMaybe"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WMaybe")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("E").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("E").foregroundColor(Color("WText")))
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WMaybe"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WMaybe")))
-                        .frame(width: rectSize, height: rectSize).overlay(Text("R").foregroundColor(Color("WText")))
+                    .frame(width: rectSize, height: rectSize).overlay(Text("R").foregroundColor(Color("WText")))
             }
             .font(Font.custom("ClearSans-Bold", size:36, relativeTo: .title))
             Spacer()
             HStack(){
                 Text("Contains: ")
-                TextField("", text: $contains).textInputAutocapitalization(.never).disableAutocorrection(true).background(Color.green.opacity(0.2))
+                TextField("", text: $contains)
+#if os(iOS)
+                    .textInputAutocapitalization(.never).disableAutocorrection(true)
+#endif
+                    .background(Color.green.opacity(0.2))
             }.padding()
             HStack(){
                 Text("Excludes: ")
-                TextField("", text: $excludes).textInputAutocapitalization(.never).disableAutocorrection(true).background(Color.red.opacity(0.2))
+                TextField("", text: $excludes)
+#if os(iOS)
+                    .textInputAutocapitalization(.never).disableAutocorrection(true)
+#endif
+                    .background(Color.red.opacity(0.2))
             }.padding()
-//            HStack(){
-//                Button("B") {
-//                            // 2. Trigger presenting the sheet
-//                            self.presentingSheet = true
-//                }.popover(isPresented: $presentingSheet, arrowEdge: .top) {
-//                    ModalView(title: "First Letter",
-//                              subtitle: "Pick the first letter")
-//
-//                }
-//
-//                Button(action:{
-//
-//                }){
-//                    Text("R ").foregroundColor(.white)
-//
-//                }.buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 5)).foregroundColor(.gray).padding()
-//                Button(action:{
-//
-//                }){
-//                    Text("E ").foregroundColor(.white)
-//
-//                }.buttonStyle(.bordered).buttonBorderShape(.roundedRectangle(radius: 5)).padding()
-//                Button(action:{
-//
-//                }){
-//                    Text("A ").foregroundColor(.white)
-//
-//                }.buttonStyle(.bordered).buttonBorderShape(.roundedRectangle(radius: 5)).padding()
-//                Button(action:{
-//
-//                }){
-//                    Text("D ").foregroundColor(.white)
-//
-//                }.buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 5)).foregroundColor(.gray).padding()
-//            }
+            //            HStack(){
+            //                Button("B") {
+            //                            // 2. Trigger presenting the sheet
+            //                            self.presentingSheet = true
+            //                }.popover(isPresented: $presentingSheet, arrowEdge: .top) {
+            //                    ModalView(title: "First Letter",
+            //                              subtitle: "Pick the first letter")
+            //
+            //                }
+            //
+            //                Button(action:{
+            //
+            //                }){
+            //                    Text("R ").foregroundColor(.white)
+            //
+            //                }.buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 5)).foregroundColor(.gray).padding()
+            //                Button(action:{
+            //
+            //                }){
+            //                    Text("E ").foregroundColor(.white)
+            //
+            //                }.buttonStyle(.bordered).buttonBorderShape(.roundedRectangle(radius: 5)).padding()
+            //                Button(action:{
+            //
+            //                }){
+            //                    Text("A ").foregroundColor(.white)
+            //
+            //                }.buttonStyle(.bordered).buttonBorderShape(.roundedRectangle(radius: 5)).padding()
+            //                Button(action:{
+            //
+            //                }){
+            //                    Text("D ").foregroundColor(.white)
+            //
+            //                }.buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 5)).foregroundColor(.gray).padding()
+            //            }
             
             Button("Parse"){
                 self.dictionary = LoadDictionary()
@@ -140,7 +156,7 @@ struct ModalView: View {
             TextField("text", text: $entry)
             Spacer()
             Button("Dismiss") { self.presentation.wrappedValue.dismiss() }
-                .accentColor(.red)
+            .accentColor(.red)
         }.padding(.top)
     }
 }
