@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-#if os(iOS)
-import ToastUI
-#endif
 
 struct StringList: View {
     var dictionary:[String]
@@ -17,28 +14,7 @@ struct StringList: View {
     var body: some View {
         List(dictionary, id: \.self) { string in
             Text(string)
-#if os(iOS)
-                .onTapGesture(count: 2) {
-                    UIPasteboard.general.string = string
-                    self.presentingToast = true
-                    
-                }
-#endif
         }
-#if os(iOS)
-        .toast(isPresented: $presentingToast, dismissAfter: 1) {
-            ToastView("Copied!") {
-                // custom content views
-                Image(systemName: "arrow.up.doc.on.clipboard")
-                    .font(.system(size: 48))
-                    .foregroundColor(.green)
-                    .padding()
-            } background: {
-                // custom background views
-                Color.green.opacity(0.01)
-            }
-        }
-#endif
     }
 }
 
@@ -49,6 +25,7 @@ struct ContentView: View {
     @State private var presentingSheet = false
     var body: some View {
         VStack(alignment: .center){
+            Spacer()
             HStack {
                 let rectSize: CGFloat = 45
                 RoundedRectangle(cornerRadius: 5).stroke(Color("WGreen"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WGreen")))
@@ -88,41 +65,6 @@ struct ContentView: View {
 #endif
                     .background(Color.red.opacity(0.2))
             }.padding()
-            //            HStack(){
-            //                Button("B") {
-            //                            // 2. Trigger presenting the sheet
-            //                            self.presentingSheet = true
-            //                }.popover(isPresented: $presentingSheet, arrowEdge: .top) {
-            //                    ModalView(title: "First Letter",
-            //                              subtitle: "Pick the first letter")
-            //
-            //                }
-            //
-            //                Button(action:{
-            //
-            //                }){
-            //                    Text("R ").foregroundColor(.white)
-            //
-            //                }.buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 5)).foregroundColor(.gray).padding()
-            //                Button(action:{
-            //
-            //                }){
-            //                    Text("E ").foregroundColor(.white)
-            //
-            //                }.buttonStyle(.bordered).buttonBorderShape(.roundedRectangle(radius: 5)).padding()
-            //                Button(action:{
-            //
-            //                }){
-            //                    Text("A ").foregroundColor(.white)
-            //
-            //                }.buttonStyle(.bordered).buttonBorderShape(.roundedRectangle(radius: 5)).padding()
-            //                Button(action:{
-            //
-            //                }){
-            //                    Text("D ").foregroundColor(.white)
-            //
-            //                }.buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 5)).foregroundColor(.gray).padding()
-            //            }
             
             Button("Parse"){
                 self.dictionary = parseDict(contains: self.contains, excludes: self.excludes)
@@ -151,6 +93,7 @@ func parseDict(contains:String, excludes:String) -> [String]{
     }
     return dictionary
 }
+// do a filter on dictionaries based on chars as you go. dict1 is first char, 
 
 struct ModalView: View {
     @Environment(\.presentationMode) var presentation

@@ -13,7 +13,6 @@
 		C60E523C279D03BD00E09132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E522A279D03BC00E09132 /* ContentView.swift */; };
 		C60E523D279D03BD00E09132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60E522B279D03BC00E09132 /* Assets.xcassets */; };
 		C60E523E279D03BD00E09132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60E522B279D03BC00E09132 /* Assets.xcassets */; };
-		C60E5249279D03E400E09132 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = C60E5248279D03E400E09132 /* ToastUI */; };
 		C60E524B279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
 		C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */; };
 		C60E524E279E498100E09132 /* ClearSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60E524D279E498100E09132 /* ClearSans-Bold.ttf */; };
@@ -28,15 +27,16 @@
 		C60E5229279D03BC00E09132 /* WORDLERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WORDLERApp.swift; sourceTree = "<group>"; };
 		C60E522A279D03BC00E09132 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C60E522B279D03BC00E09132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C60E5230279D03BC00E09132 /* WORDLER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WORDLER.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C60E5236279D03BD00E09132 /* WORDLER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WORDLER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60E5230279D03BC00E09132 /* WORDLER!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WORDLER!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60E5236279D03BD00E09132 /* WORDLER!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WORDLER!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E5238279D03BD00E09132 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C60E524A279D040700E09132 /* ScrabbleFiveWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrabbleFiveWords.swift; sourceTree = "<group>"; };
 		C60E524D279E498100E09132 /* ClearSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ClearSans-Bold.ttf"; sourceTree = "<group>"; };
-		C60E5250279E4A5A00E09132 /* WORDLER--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WORDLER--iOS--Info.plist"; sourceTree = "<group>"; };
-		C60E5251279E4AA300E09132 /* WORDLER--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WORDLER--macOS--Info.plist"; sourceTree = "<group>"; };
+		C60E5250279E4A5A00E09132 /* WORDLER!--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WORDLER!--iOS--Info.plist"; sourceTree = "<group>"; };
+		C60E5251279E4AA300E09132 /* WORDLER!--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WORDLER!--macOS--Info.plist"; sourceTree = "<group>"; };
 		C60E525227A0B16300E09132 /* WordleFiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleFiveWords.swift; sourceTree = "<group>"; };
 		C60E525527A0B31400E09132 /* DictionaryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryLoader.swift; sourceTree = "<group>"; };
+		C670CE0127A13A2500620250 /* WORDLER (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WORDLER (iOS).entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60E5249279D03E400E09132 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +60,9 @@
 		C60E5223279D03BB00E09132 = {
 			isa = PBXGroup;
 			children = (
-				C60E5251279E4AA300E09132 /* WORDLER--macOS--Info.plist */,
-				C60E5250279E4A5A00E09132 /* WORDLER--iOS--Info.plist */,
+				C670CE0127A13A2500620250 /* WORDLER (iOS).entitlements */,
+				C60E5251279E4AA300E09132 /* WORDLER!--macOS--Info.plist */,
+				C60E5250279E4A5A00E09132 /* WORDLER!--iOS--Info.plist */,
 				C60E5228279D03BC00E09132 /* Shared */,
 				C60E5237279D03BD00E09132 /* macOS */,
 				C60E5231279D03BC00E09132 /* Products */,
@@ -86,8 +86,8 @@
 		C60E5231279D03BC00E09132 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C60E5230279D03BC00E09132 /* WORDLER.app */,
-				C60E5236279D03BD00E09132 /* WORDLER.app */,
+				C60E5230279D03BC00E09132 /* WORDLER!.app */,
+				C60E5236279D03BD00E09132 /* WORDLER!.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C60E522F279D03BC00E09132 /* WORDLER (iOS) */ = {
+		C60E522F279D03BC00E09132 /* WORDLER! (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C60E5241279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER (iOS)" */;
+			buildConfigurationList = C60E5241279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER! (iOS)" */;
 			buildPhases = (
 				C60E522C279D03BC00E09132 /* Sources */,
 				C60E522D279D03BC00E09132 /* Frameworks */,
@@ -115,17 +115,16 @@
 			);
 			dependencies = (
 			);
-			name = "WORDLER (iOS)";
+			name = "WORDLER! (iOS)";
 			packageProductDependencies = (
-				C60E5248279D03E400E09132 /* ToastUI */,
 			);
 			productName = "WORDLER (iOS)";
-			productReference = C60E5230279D03BC00E09132 /* WORDLER.app */;
+			productReference = C60E5230279D03BC00E09132 /* WORDLER!.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C60E5235279D03BD00E09132 /* WORDLER (macOS) */ = {
+		C60E5235279D03BD00E09132 /* WORDLER! (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C60E5244279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER (macOS)" */;
+			buildConfigurationList = C60E5244279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER! (macOS)" */;
 			buildPhases = (
 				C60E5232279D03BD00E09132 /* Sources */,
 				C60E5233279D03BD00E09132 /* Frameworks */,
@@ -135,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = "WORDLER (macOS)";
+			name = "WORDLER! (macOS)";
 			productName = "WORDLER (macOS)";
-			productReference = C60E5236279D03BD00E09132 /* WORDLER.app */;
+			productReference = C60E5236279D03BD00E09132 /* WORDLER!.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -158,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C60E5227279D03BB00E09132 /* Build configuration list for PBXProject "WORDLER" */;
+			buildConfigurationList = C60E5227279D03BB00E09132 /* Build configuration list for PBXProject "WORDLER!" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,14 +167,13 @@
 			);
 			mainGroup = C60E5223279D03BB00E09132;
 			packageReferences = (
-				C60E5247279D03E400E09132 /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = C60E5231279D03BC00E09132 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C60E522F279D03BC00E09132 /* WORDLER (iOS) */,
-				C60E5235279D03BD00E09132 /* WORDLER (macOS) */,
+				C60E522F279D03BC00E09132 /* WORDLER! (iOS) */,
+				C60E5235279D03BD00E09132 /* WORDLER! (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -343,14 +341,16 @@
 		C60E5242279D03BD00E09132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WORDLER (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NRQ9WJKR5R;
+				DEVELOPMENT_TEAM = LARMPUH29Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WORDLER--iOS--Info.plist";
+				INFOPLIST_FILE = "WORDLER!--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WORDLER!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,10 +361,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.modern-magic.WORDLER";
-				PRODUCT_NAME = WORDLER;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wordler-";
+				PRODUCT_NAME = "WORDLER!";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,14 +375,17 @@
 		C60E5243279D03BD00E09132 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WORDLER (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NRQ9WJKR5R;
+				DEVELOPMENT_TEAM = LARMPUH29Z;
 				ENABLE_PREVIEWS = YES;
+				GCC_OPTIMIZATION_LEVEL = z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WORDLER--iOS--Info.plist";
+				INFOPLIST_FILE = "WORDLER!--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WORDLER!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,11 +396,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.modern-magic.WORDLER";
-				PRODUCT_NAME = WORDLER;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wordler-";
+				PRODUCT_NAME = "WORDLER!";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -406,18 +412,18 @@
 		C60E5245279D03BD00E09132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NRQ9WJKR5R;
+				DEVELOPMENT_TEAM = LARMPUH29Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WORDLER--macOS--Info.plist";
+				INFOPLIST_FILE = "WORDLER!--macOS--Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -426,8 +432,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.modern-magic.WORDLER";
-				PRODUCT_NAME = WORDLER;
+				PRODUCT_BUNDLE_IDENTIFIER = info.WORDLER;
+				PRODUCT_NAME = "WORDLER!";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -437,18 +443,18 @@
 		C60E5246279D03BD00E09132 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NRQ9WJKR5R;
+				DEVELOPMENT_TEAM = LARMPUH29Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WORDLER--macOS--Info.plist";
+				INFOPLIST_FILE = "WORDLER!--macOS--Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,8 +463,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.modern-magic.WORDLER";
-				PRODUCT_NAME = WORDLER;
+				PRODUCT_BUNDLE_IDENTIFIER = info.WORDLER;
+				PRODUCT_NAME = "WORDLER!";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -468,7 +474,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C60E5227279D03BB00E09132 /* Build configuration list for PBXProject "WORDLER" */ = {
+		C60E5227279D03BB00E09132 /* Build configuration list for PBXProject "WORDLER!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C60E523F279D03BD00E09132 /* Debug */,
@@ -477,7 +483,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C60E5241279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER (iOS)" */ = {
+		C60E5241279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER! (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C60E5242279D03BD00E09132 /* Debug */,
@@ -486,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C60E5244279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER (macOS)" */ = {
+		C60E5244279D03BD00E09132 /* Build configuration list for PBXNativeTarget "WORDLER! (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C60E5245279D03BD00E09132 /* Debug */,
@@ -496,25 +502,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C60E5247279D03E400E09132 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quanshousio/ToastUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C60E5248279D03E400E09132 /* ToastUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C60E5247279D03E400E09132 /* XCRemoteSwiftPackageReference "ToastUI" */;
-			productName = ToastUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C60E5224279D03BB00E09132 /* Project object */;
 }
