@@ -21,6 +21,8 @@
 		C60E525427A0B16300E09132 /* WordleFiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525227A0B16300E09132 /* WordleFiveWords.swift */; };
 		C60E525627A0B31400E09132 /* DictionaryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525527A0B31400E09132 /* DictionaryLoader.swift */; };
 		C60E525727A0B31400E09132 /* DictionaryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E525527A0B31400E09132 /* DictionaryLoader.swift */; };
+		C670CE0327A5F3D600620250 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C670CE0227A5F3D600620250 /* Tile.swift */; };
+		C670CE0427A5F3D600620250 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C670CE0227A5F3D600620250 /* Tile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		C60E525227A0B16300E09132 /* WordleFiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleFiveWords.swift; sourceTree = "<group>"; };
 		C60E525527A0B31400E09132 /* DictionaryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryLoader.swift; sourceTree = "<group>"; };
 		C670CE0127A13A2500620250 /* WORDLER (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WORDLER (iOS).entitlements"; sourceTree = "<group>"; };
+		C670CE0227A5F3D600620250 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 				C60E525527A0B31400E09132 /* DictionaryLoader.swift */,
 				C60E525227A0B16300E09132 /* WordleFiveWords.swift */,
 				C60E522B279D03BC00E09132 /* Assets.xcassets */,
+				C670CE0227A5F3D600620250 /* Tile.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -207,6 +211,7 @@
 				C60E523B279D03BD00E09132 /* ContentView.swift in Sources */,
 				C60E5239279D03BD00E09132 /* WORDLERApp.swift in Sources */,
 				C60E525327A0B16300E09132 /* WordleFiveWords.swift in Sources */,
+				C670CE0327A5F3D600620250 /* Tile.swift in Sources */,
 				C60E525627A0B31400E09132 /* DictionaryLoader.swift in Sources */,
 				C60E524B279D040700E09132 /* ScrabbleFiveWords.swift in Sources */,
 			);
@@ -219,6 +224,7 @@
 				C60E523C279D03BD00E09132 /* ContentView.swift in Sources */,
 				C60E523A279D03BD00E09132 /* WORDLERApp.swift in Sources */,
 				C60E525427A0B16300E09132 /* WordleFiveWords.swift in Sources */,
+				C670CE0427A5F3D600620250 /* Tile.swift in Sources */,
 				C60E525727A0B31400E09132 /* DictionaryLoader.swift in Sources */,
 				C60E524C279D040700E09132 /* ScrabbleFiveWords.swift in Sources */,
 			);

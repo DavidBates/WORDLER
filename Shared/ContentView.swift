@@ -27,23 +27,14 @@ struct ContentView: View {
         VStack(alignment: .center){
             Spacer()
             HStack {
-                let rectSize: CGFloat = 45
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WGreen"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WGreen")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("W").foregroundColor(Color("WText")))
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("O").foregroundColor(Color("WText")))
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("R").foregroundColor(Color("WText")))
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("D").foregroundColor(Color("WText")))
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WNot"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WNot")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("L").foregroundColor(Color("WText")))
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WMaybe"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WMaybe")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("E").foregroundColor(Color("WText")))
-                RoundedRectangle(cornerRadius: 5).stroke(Color("WMaybe"), lineWidth: 3).background(RoundedRectangle(cornerRadius: 5).fill(Color("WMaybe")))
-                    .frame(width: rectSize, height: rectSize).overlay(Text("R").foregroundColor(Color("WText")))
+                Tile(bgColor: Color("WGreen"), letter: "W")
+                Tile(bgColor: Color("WNot"), letter: "O")
+                Tile(bgColor: Color("WNot"), letter: "R")
+                Tile(bgColor: Color("WNot"), letter: "D")
+                Tile(bgColor: Color("WNot"), letter: "L")
+                Tile(bgColor: Color("WMaybe"), letter: "E")
+                Tile(bgColor: Color("WMaybe"), letter: "R")
             }
-            .font(Font.custom("ClearSans-Bold", size:36, relativeTo: .title))
             Spacer()
             HStack(){
                 Text("Contains: ")
@@ -116,6 +107,6 @@ struct ModalView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().preferredColorScheme(.dark)
     }
 }
